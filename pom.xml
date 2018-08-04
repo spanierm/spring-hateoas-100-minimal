@@ -23,6 +23,8 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <java.version>1.8</java.version>
     <spring-hateoas.version>1.0.0.BUILD-SNAPSHOT</spring-hateoas.version>
+    <!--Right after adding this property, building worked as expected-->
+    <spring-plugin.version>2.0.0.BUILD-SNAPSHOT</spring-plugin.version>
   </properties>
 
   <dependencies>

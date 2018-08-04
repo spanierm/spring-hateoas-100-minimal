@@ -1,4 +1,6 @@
-# Spring HATEOAS 1.0.0.BUILD-SNAPSHOT Build Issue Example
+# Spring HATEOAS 1.0.0.BUILD-SNAPSHOT Build Issue Example - FIXED
+
+## Problem
 
 Minimal example using Spring HATEOAS's `1.0.0.BUILD-SNAPSHOT` version.
 When running the tests with `mvn clean verify`,
@@ -80,4 +82,12 @@ Caused by: org.springframework.beans.factory.NoUniqueBeanDefinitionException: No
 	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:818) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
 	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:724) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
 	... 45 common frames omitted
+```
+
+## Solution
+Simply add the following property:
+```xml
+<properties>
+  <spring-plugin.version>2.0.0.BUILD-SNAPSHOT</spring-plugin.version>
+</properties>
 ```
